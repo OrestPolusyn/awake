@@ -15,11 +15,15 @@
         <div class="container">
             <div class="navigation">
                 <a class="logo" href="#"><img src="./img/logo.svg" alt=""></a>
-                <nav>
+                <nav class="mobile-menu" id="navbar">
+                    <a href="javascript:void(0);" onclick="closeNavbar()" class="close"></a>
+
                     <li class="links"><a href="#services">Наши услуги</a></li>
                     <li class="links"><a href="#portfolio">Портфолио</a></li>
                     <li class="links"><a href="#contact">Контакты</a></li>
+                    <li class="links mail-link"><a href="awake.studio@yandex.com">awake.studio@yandex.com</a></li>
                 </nav>
+                <span class="open" onclick="openNavbar()"></span>
             </div>
             <div class="top-descript">
 
@@ -27,7 +31,6 @@
                 <h3 class="sub-title">Создадим сайт и выведем в ТОП-10 Google. <br> Увеличим количество целевого трафика
                     <br>
                     в результате чего Вы получите больше <br> звонков, заявок и продаж.</h3>
-
                 <button class="btn-conect"><span>Оставить заявку</span></button>
             </div>
         </div>
@@ -167,11 +170,27 @@
                         <p class="pblock-title">Cara Delevingne</p>
                         <span class="pblock-span">Этот проект является концепцией веб-сайта для Cara Delevingne</span>
                     </div>
+                    <div class="lpblock mobile-block">
+                        <a href="https://drive.google.com/file/d/1_Da8R50CzMcmSCAa0g9IqG3Z4FGKXBXq/view?usp=sharing">
+                            <img src="./img/guy-sea.jpg" alt="Ohueno">
+                        </a>
+                        <p class="pblock-title">Ohueno</p>
+                        <span class="pblock-span">Концепт интернет-магазина для украинского бренда одежды Ohueno</span>
+                    </div>
+
                     <div class="rpblock">
                         <a href="https://drive.google.com/file/d/10YdiEbcDUJbdUe1eJw0h7X7Hn1u_iSoF/view?usp=sharing">
                             <img src="./img/salads.jpg" alt="Food"></a>
                         <p class="pblock-title">Happy Food</p>
                         <span class="pblock-span">Сервис по доставке здоровой еды</span>
+                    </div>
+                    <div class="lpblock mobile-block">
+                        <a href="https://drive.google.com/file/d/17vW0qhGyCJEYLT8sd2_RuPLaedLBXZ_0/view?usp=sharing">
+                            <img src="./img/nirvana.jpg" alt="Nirvana">
+                        </a>
+                        <p class="pblock-title">Nirvana</p>
+                        <span class="pblock-span">Промо сайт призван познакомить новое поколение с музыкальным
+                            творчеством группы Nirvana</span>
                     </div>
                     <div class="rpblock last-block">
                         <a href="https://drive.google.com/file/d/16vWDWddtf_Yaqb7VzobgC5bnJJ74iJW7/view?usp=sharing">
@@ -181,7 +200,7 @@
                         <span class="pblock-span">Дизайн интернет-магазина по доставке суши</span>
                     </div>
                 </div>
-                <div class="left-pblock">
+                <div class="left-pblock desktop-block">
                     <div class="lpblock">
                         <a href="https://drive.google.com/file/d/1_Da8R50CzMcmSCAa0g9IqG3Z4FGKXBXq/view?usp=sharing">
                             <img src="./img/guy-sea.jpg" alt="Ohueno">
@@ -196,6 +215,13 @@
                         <p class="pblock-title">Nirvana</p>
                         <span class="pblock-span">Промо сайт призван познакомить новое поколение с музыкальным
                             творчеством группы Nirvana</span>
+                    </div>
+                    <div class="rpblock last-block mobile-block">
+                        <a href="https://drive.google.com/file/d/16vWDWddtf_Yaqb7VzobgC5bnJJ74iJW7/view?usp=sharing">
+                            <img src="./img/sushi.jpg" alt="Сушы">
+                        </a>
+                        <p class="pblock-title">Sushi Boom</p>
+                        <span class="pblock-span">Дизайн интернет-магазина по доставке суши</span>
                     </div>
                 </div>
             </div>
@@ -238,40 +264,11 @@
                 Veretennikova</a> </div>
     </footer>
     <script src="./script/jquery-3.2.1.js"></script>
+    <script src="./script/animation.js"></script>
+    <script src="./script/menu.js"></script>
     <script src="./script/sendForm.js"></script>
     <script>
-        $(".hidden-info").hide();
-        $(".block-info").click(function () {
-            $(this).siblings(".hidden-info").slideToggle("slow");
-        });
-        $(".block-info").click(function () {
-            $(this).toggleClass('up');
-        });
-        $(".btn-order").click(function () {
-            $(".overlay").show();
-            $('html, body').animate({ scrollTop: 0 }, 50);
-            return false;
-        });
-        $(".btn-conect").click(function () {
-            $(".overlay").show();
-            $('html, body').animate({ scrollTop: 0 }, 50);
-            return false;
-        })
-        $(".overlay img").click(function () {
-            $(".overlay").hide()
-        });
-        $(".btn-send").click(function () {
-            $(".popup").hide();
-            $(".send-result").show();
 
-            $('html, body').animate({ scrollTop: 0 }, 50);
-            return false;
-        });
-        $(".btn-more").click(function () {
-            $(".rpblock").show();
-            $(".last-block").css("margin-bottom", "46px");
-            $(".btn-more").hide();
-        });
     </script>
 </body>
 

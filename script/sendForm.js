@@ -7,13 +7,10 @@ $(document).ready(function () {
 		
 		$.ajax({
 			type: "POST",
-			url: 'https://newsdirect.newsquantified.com/support/SendEmailFromLandingPage',
+			url: 'opect.pol@i.ua',
 			data: {
 				fn: $('input[name=fn]').val(),
-				co: $('input[name=co]').val(),
-				em: $('input[name=em]').val(),
-				ph: $('input[name=ph]').val(),
-				ct: $('select[name=ct]').val(),
+				tel: $('input[name=tel]').val(),
 				ms: $('textarea[name=ms]').val(),
 			},
 			success: function (result) {
