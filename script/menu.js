@@ -2,13 +2,13 @@
 
 function openNavbar() {
     document.querySelector("#navbar").style.width = "100%";
-    document.querySelectorAll(".open")[0].style.display = 0;
+    $(".open").css("display","none");
     $(".mobile-menu").css("display","flex");
 
   }
   function closeNavbar() {
     document.querySelector("#navbar").style.width = "0";
-    document.querySelectorAll(".open")[0].style.opacity = 1;
+    $(".open").css("display","block");
   }
 
   
