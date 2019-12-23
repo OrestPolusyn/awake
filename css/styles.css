@@ -1,9 +1,25 @@
 @font-face {
+    font-family: SF UI Display-Ligth;
+    src: local('SF UI Display-Ligth'), local('SF UI Display-Ligth'),
+    url('../fonts/SFUIDisplay-Light.woff') format('woff2'); /* Chrome 26+, Opera 23+, Firefox 39+ */
+}
+
+@font-face {
+    font-family: SF UI Display-Thin;
+    src: local('SF UI Display-Thin'), local('SF UI Display-Thin'),
+    url('../fonts/SFUIDisplay-Thin.woff') format('woff2'); /* Chrome 26+, Opera 23+, Firefox 39+ */
+}
+
+@font-face {
     font-family: SF UI Display;
-    font-style: normal;
-    font-weight: 400;
-    src: local('SF UI Display Regular'), local('SF UI Display-Regular'),
-         url('../fonts/SFUIDisplay-Regular.otf') format('opentype')
+    src: local('SF UI Display'), local('SF UI Display'),
+    url('../fonts/SFUIDisplay-Regular.woff') format('woff2'); /* Chrome 26+, Opera 23+, Firefox 39+ */
+}
+
+@font-face {
+    font-family: SF UI Display-Ultralight;
+    src: local('SF UI Display-Ultralight'), local('SF UI Display-Ultralight'),
+    url('../fonts/SFUIDisplay-Ultralight.woff') format('woff2'); /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
 html {
@@ -25,6 +41,8 @@ body {
 
 h3 {
     margin: 0;
+    font-weight: 600;
+    font-size: 24px;
 }
 
 .container {
@@ -57,6 +75,7 @@ nav {
 
 .links a {
     margin: 0px 52px;
+    font-weight: 600;
 }
 
 .links a:hover {
@@ -130,6 +149,8 @@ a {
     background-color: transparent;
     color: #fff;
     cursor: pointer;
+    font-weight: 600;
+
 }
 .btn-conect:hover, .btn-order:hover,.popup .btn-send:hover, .btn-send:hover,
 .btn-conect:hover span, .btn-order:hover span{
@@ -157,7 +178,10 @@ p {
 .info {
     padding-top: 100px;
     margin-bottom: 50px;
-}
+    font-family: SF UI Display-Ligth;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 140%;}
 
 .services {
     border-top:0.5px solid #FFFFFF;
@@ -261,6 +285,8 @@ p {
     padding-top: 162px;
     margin-bottom: 160px;
     color: #000;
+    font-size: 26px;
+    line-height: 31px;
 }
 
 .rpblock, .lpblock {
@@ -275,14 +301,17 @@ p {
 
 .pblock-title {
     margin: 0;
+    font-weight: 600;
     font-size: 24px;
     line-height: 29px;
+    margin-bottom: 6px;
     padding-top: 18px;
 }
 
 .pblock-span { 
+    font-weight: 300;
     font-size: 20px;
-    line-height: 24px;
+    line-height: 24px;    
 }
 
 .left-pblock .lpblock:first-child {
@@ -315,6 +344,8 @@ p {
     font-weight: 300;
     font-size: 20px;
     line-height: 24px;
+    font-family: SF UI Display-Ligth;
+
 }
 
 
@@ -340,14 +371,24 @@ p {
 
 .crigth-title {
     margin-bottom: 116px;
+    font-size: 26px;
+    line-height: 31px;
+    font-weight: bold;
 }
 
 .phone, .mail {
     font-style: normal;
     font-weight: 300;
+    font-weight: 300;
     font-size: 26px;
     line-height: 120%;
     margin-bottom: 22px;
+    font-family: SF UI Display-Ligth;
+}
+
+.crigth-title {
+    margin-top: 0;
+
 }
 
 .social img {
@@ -362,6 +403,7 @@ p {
     font-size: 27px;
     line-height: 140%;
     color: #fff;
+    text-transform: none;
 }
 
 input {
@@ -427,9 +469,9 @@ height: 72px;
 
 
 .conteiner_form {
-    max-width: 400px;
+    max-width: 500px;
     margin: 0 auto;
-    margin-right: 50px;
+    margin-right: 0;
 }
 
 div.hidden-info {
