@@ -3,7 +3,7 @@
     font-style: normal;
     font-weight: 400;
     src: local('SF UI Display Regular'), local('SF UI Display-Regular'),
-         url('./fonts/SFUIDisplay-Regular.otf') format('opentype')
+         url('../fonts/SFUIDisplay-Regular.otf') format('opentype')
 }
 
 html {
@@ -36,7 +36,7 @@ h3 {
 header {
     background-image: linear-gradient(to right, 
     rgba(0, 0, 0, 0.7), 
-    rgba(0, 0, 0, 0.7)), url(./img/bg-top.jpg);
+    rgba(0, 0, 0, 0.7)), url(../img/bg-top.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -231,7 +231,7 @@ p {
     display: inline-block;
     height: 12px;
     width: 18px;
-    background-image: url(./img/arrow-down.svg);
+    background-image: url(../img/arrow-down.svg);
     position: absolute;
     position: absolute;
     right: 18px;
