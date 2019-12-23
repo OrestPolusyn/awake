@@ -23,7 +23,7 @@ $(".overlay img").click(function () {
 $(".btn-send").click(function () {
     $(".popup").hide();
     $(".send-result").show();
-
+    $(".overlay").show();
     $('html, body').animate({ scrollTop: 0 }, 50);
     return false;
 });
@@ -32,3 +32,4 @@ $(".btn-more").click(function () {
     $(".last-block").css("margin-bottom", "46px");
     $(".btn-more").hide();
 });
+
