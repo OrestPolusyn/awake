@@ -61,7 +61,7 @@ nav {
 
 .links a:hover {
     padding-bottom: 14px;
-    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
 }
 
 .list-item .list-info {
