@@ -689,13 +689,13 @@ form .checkbox label:after{
   } */
   
   .check input:checked ~ .checkmark {
-    background-image: url(/img/check-white.svg);
+    background-image: url(../img/check-white.svg);
     background-repeat: no-repeat;
     background-position: center;
   }
 
   .pop-form .check input:checked ~ .checkmark {
-    background-image: url(/img/check-black.svg);
+    background-image: url(../img/check-black.svg);
     background-repeat: no-repeat;
     background-position: center;
   }
