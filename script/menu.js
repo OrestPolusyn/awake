@@ -1,23 +1,34 @@
 "use stcrict";
 
-function openNavbar() {
+if ($(window).width() < 767) {
+  
+  function openNavbar() {
     document.querySelector("#navbar").style.width = "100%";
-    $(".open").css("display","none");
-    $(".mobile-menu").css("display","flex");
+    $(".open").css("display", "none");
+    $(".mobile-menu").css("display", "flex");
+  }
 
-}
 
-
-function closeNavbar() {
+  function closeNavbar() {
     document.querySelector("#navbar").style.width = "0";
-    $(".open").css("display","block");
+    $(".open").css("display", "block");
+
+  }
+  
+  
+
+  $(".links a").click(function () {
+    document.querySelector(".mobile-menu").style.width = "0";
+    $(".open").css("display", "block");
+  });
 }
 
 function closeMail() {
-  $(".overlay").css("display","none");
+  $(".overlay").css("display", "none");
 }
 
-$(".links a").click(function () {
-  document.querySelector("#navbar").style.width = "0";
-  $(".open").css("display","block");
-});
+
+function closeAgr() {
+  $(".agreement").css("display", "none");
+  $(".popup").css("display", "flex");
+}

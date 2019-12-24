@@ -13,21 +13,41 @@ $(".btn-order").click(function () {
 });
 $(".btn-conect").click(function () {
     $(".overlay").show();
+    $(".agr-img").hide();
+
 })
-$(".overlay img").click(function () {
+$(".res-img").click(function () {
     $(".overlay").hide()
 });
+
 $(".btn-send").click(function () {
     $(".popup").hide();
     $(".send-result").show();
     $(".overlay").show();
     $(".overlay").css("position","fixed")
+       
 });
 $(".btn-more").click(function () {
     $(".rpblock").show();
     $(".last-block").css("margin-bottom", "46px");
     $(".btn-more").hide();
 });
+
+$("a#check").click(function () {
+    $(".agreement").show();
+    $(".popup").hide();
+    $(".res-img").hide();
+    $(".agr-img").show();
+});
+
+$(".agr-img").click(function () {
+    $(".agreement").hide();
+    $(".popup").show();
+    $(".agr-img").hide();
+    $(".res-img").show();
+});
+
+
 
 
 function clickCheck() {

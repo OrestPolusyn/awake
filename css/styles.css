@@ -498,6 +498,7 @@ height: 72px;
 
 .conteiner_form {
     max-width: 500px;
+    width: 100%;
 }
 
 div.hidden-info {
@@ -510,15 +511,17 @@ input:focus {
 
 .overlay {
     display: none;
-    position: absolute;
+    position: fixed;
     background-color: rgba(0, 0, 0, 0.5);
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-    height: 804px;
+    height: 100vh;
     z-index: 10;
 }
+
+
 .popup {
     position: absolute;
     width: 760px;
@@ -526,6 +529,7 @@ input:focus {
     top: 57px;
     background-color: #fff;
     left: 24%;
+
 }
 
 .pop-form {
@@ -565,7 +569,7 @@ input:focus {
     color: #fff;
 }
 
-.overlay img {
+.res-img {
     position: absolute;
     width: 18px;
     height: 18px;
@@ -583,6 +587,73 @@ input:focus {
     left: 30%;
     top: 208px;
     background-color: #fff;
+}
+
+.agreement {
+    display: none;
+    position: fixed;
+    width: 960px;
+    height: 600px;
+    left: 16%;
+    top: 208px;
+    background-color: #fff;
+    color: #000000;
+    padding: 60px;
+    z-index: 10;
+}
+
+.scroll {
+    overflow-y: scroll;
+    width: 840px;
+    height: 520px;
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+  }
+  
+
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #8B8B8B; 
+    width: 2px;
+    height: 40px;
+  }
+  
+.scroll p {
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 40px;
+ }
+
+ .sscroll span {
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+
+ }
+
+.title-arg {
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 110%;
+}
+
+
+.agr-img {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    right: 198px;
+    top: 57px;
+    cursor: pointer;
 }
 
 .send-result img {
@@ -977,7 +1048,7 @@ header {
         font-weight: normal;
         font-size: 18px;
         line-height: 140%;
-        justify-content: center;
+        justify-content: left;
         padding-top: 50px;
         margin-bottom: 54px;
     }
@@ -1006,7 +1077,7 @@ header {
     }
     
     .design {
-        padding: 10px 30px 0;
+        padding: 10px 30px 0 0;
         margin-bottom: 10px;
         font-style: normal;
         font-weight: 300;
@@ -1142,6 +1213,8 @@ header {
 @media (min-width: 320px) and (max-width: 767px)  {
  .popup {
     height: 100vh;
+    display: flex;
+    justify-content: center;
  }
  }
 
@@ -1155,8 +1228,22 @@ header {
         height: fit-content;
         width: 100%;
         z-index: 6;
+        display: flex;
+        justify-content: center;
     }
 
+    .agreement {
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 6;
+        padding: 36px 14px 2px;
+    }
+    .scroll {
+        height: 100%;
+        width: 100%;
+    }
     .pop-form {
         padding: 100px 0 0 10px;
     }
@@ -1186,6 +1273,19 @@ header {
         z-index: 5;
     }
 
+    .title-arg {
+        font-family: SF UI Display;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 110%; 
+        padding-right: 30px;
+    }
+
+    .scroll p {
+        font-size: 14px;
+    }
+
     .result-title, .result-subtitle {
         font-style: normal;
         font-weight: normal;
@@ -1197,6 +1297,20 @@ header {
     .send-result img {
         left: 43%;
         top: 120px;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0;
+      }
+      .close {
+        color: transparent;
+        position: absolute;
+        right: 14px;
+        top: 36px;
+        cursor: pointer;
+        height: 32px;
+        width: 32px;
+        background-image: url(../img/close_mobile.svg);
     }
 
 }
