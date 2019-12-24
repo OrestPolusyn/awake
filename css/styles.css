@@ -142,7 +142,16 @@ a {
     margin-bottom: 96px;
 }
 
+.checkbox p {
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+}
+
 .btn-conect, .btn-more, .btn-order, .btn-send {
+    font-family: SF UI Display;
     width: 360px;
     height: 86px;
     border: 0.5px solid #FFFFFF;
@@ -332,6 +341,10 @@ p {
     font-size: 24px;
     line-height: 29px;
     font-weight: bold;
+}
+
+.smm-mobile {
+    display: none;
 }
 
 .more {
@@ -606,38 +619,15 @@ input:focus {
 
 .checkbox {
 	position:relative;
-	padding-left:50px;
 }
 .checkbox input[type=checkbox] {
 	display:none;
 }
- .checkbox label:after {
-	content:'';
-	display:block;
-	width: 26px;
-    height: 26px;
-	outline:1px solid #fff;
-	position:absolute;
-	top:0;
-	left:0;
-}
-.checkbox input[type=checkbox]:checked + label:after {
-	width: 26px;
-    height: 26px;
-	background-color:transparent;
-} 
 
-.checkbox input {
-    box-sizing: border-box;
-    width: 26px;
-    height: 26px;
-    background-color: transparent;
-    border: 1px solid #FFFFFF;
-} 
 
 .checkbox a {
     text-decoration: underline;
-
+    color: #000;
 }
 
 .popup .checkbox {
@@ -645,9 +635,83 @@ input:focus {
     margin-bottom: 30px;
 }
 
-.popup .checkbox label:after{ 
+.popup .checkbox:checked + label{ 
+    width: 26px;
+    height: 26px;
     outline: 1px solid #000;
+    background-image: url(/img/check-black.svg);
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
+
+form .checkbox label:after{ 
+    background-image: url(/img/check-white.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.check {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+  }
+  
+  .check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: transparent;
+    border: 1px solid #fff;
+  }
+  
+  .pop-form .checkmark {
+    border: 1px solid #000;
+ 
+  }
+  /* .check:hover input ~ .checkmark {
+    background-color: transparent;
+  } */
+  
+  .check input:checked ~ .checkmark {
+    background-image: url(/img/check-white.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .pop-form .check input:checked ~ .checkmark {
+    background-image: url(/img/check-black.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .check input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+
+
 
 .checkbox a:hover {
     cursor: pointer;
@@ -817,6 +881,14 @@ header {
         font-weight: 300;
         font-size: 12px;
         padding-top:0;
+    }
+
+    .smm-desktop{
+        display: none;
+    }
+
+    .smm-mobile {
+       display: block;
     }
 
     .block-info::after {
@@ -999,6 +1071,11 @@ header {
     .desktop-block {
         display: none;
     }
+    .checkbox p { 
+    font-size: 10px;
+    }
+
+
 }
 
 @media (min-width: 568px) and (max-width: 767px) { 

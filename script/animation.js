@@ -33,3 +33,23 @@ $(".btn-more").click(function () {
     $(".btn-more").hide();
 });
 
+
+function clickCheck() {
+    const  checkBox = document.querySelectorAll("#check");
+    const send = document.querySelectorAll(".btn-send");
+    if (checkBox[0].checked == true ){
+        send[0].disabled = false;
+    } else {
+        send[0].disabled = true;
+    }
+}
+
+function clickCheckBtm() {
+    const  checkBox = document.querySelectorAll("#check");
+    const send = document.querySelectorAll(".btn-send");
+    if (checkBox[1].checked == true ){
+        send[1].disabled = false;
+    } else {
+        send[1].disabled = true;
+    }
+}

@@ -41,7 +41,7 @@
             <div class="pop-form">
                 <a href="javascript:void(0);" onclick="closeMail()" class="close clsmail"></a>
 
-                <h3 class="pop-title">Оставьте заявку и мы сважемся с Вами</h3>
+                <h3 class="pop-title">Оставьте заявку и мы свяжемся с Вами</h3>
                 <form class="pop-confir" action="mailto:opect.pol@i.ua" method="post">
                     <div>
                         <input class="holder" minlength="2" maxlength="40" type="text" placeholder="Ваше имя"
@@ -51,10 +51,13 @@
                     </div>
                 </form>
                 <div class="checkbox">
-                    <input type="checkbox" id="check"><label for="check"></label> 
-                    <p>Я даю согласие на обработку персональных данных <br> в соответсвии с <a href="#check">политикой конфиденциальности</a> </p>
+                    <label class="check">
+                        <input type="checkbox" id="check"  onclick="clickCheck()">
+                        <span class="checkmark"></span>
+                      </label>                    <p>Я даю согласие на обработку персональных данных <br> в соответсвии с <a href="#check">политикой
+                            конфиденциальности</a> </p>
                 </div>
-                <input class="btn-send" type="submit" value="Отправить" />
+                <input class="btn-send" type="submit" value="Отправить" disabled/>
             </div>
 
         </div>
@@ -89,12 +92,18 @@
                 <li class="list-item">
                     <h3 class="block-info">SMM</h3>
                     <div class="hidden-info">
-                        <p class="info">Проанализируем активность ваших конкурентов и составим медиаплан.
+                        <p class="info smm-desktop">Проанализируем активность ваших конкурентов и составим медиаплан.
                             <br> Проинформируем широкую аудиторию о вашем бренде и популяризируем его.
                             <br> Настроим таргетированную рекламу исключительно на вашу аудиторию.
                             <br> Гарантируем привлечение подписчиков, никаких ботов.
                             <br> Обеспечим обратную связь с пользователями и прирост продаж.
                             <br> Увеличим естественный трафик вашего сайта с социальных сетей.</p>
+                        <p class="info smm-mobile">Проанализируем активность ваших конкурентов и составим медиаплан.
+                            <br> <br> Проинформируем широкую аудиторию о вашем бренде и популяризируем его.
+                            <br> <br> Настроим таргетированную рекламу исключительно на вашу аудиторию.
+                            <br> <br> Гарантируем привлечение подписчиков, никаких ботов.
+                            <br> <br> Обеспечим обратную связь с пользователями и прирост продаж.
+                            <br> <br> Увеличим естественный трафик вашего сайта с социальных сетей.</p>
                         <button class="btn-order"><span>Заказать</span></button>
                     </div>
                 </li>
@@ -224,7 +233,7 @@
                         <span class="pblock-span">Промо сайт призван познакомить новое поколение с музыкальным
                             творчеством группы Nirvana</span>
                     </div>
-                 
+
                 </div>
             </div>
             <div class="more">
@@ -248,22 +257,28 @@
                 </div>
             </div>
             <div class="conteiner_form">
-                <h3 class="sub-title">Оставьте заявку и мы сважемся с Вами</h3>
+                <h3 class="sub-title">Оставьте заявку и мы свяжемся с Вами</h3>
                 <form class="confir" action="mailto:opect.pol@i.ua" method="post">
                     <div>
                         <input class="holder" name="fn" minlength="2" maxlength="40" type="text" placeholder="Ваше имя"
                             required />
-                        <input class="holder"  type="email" placeholder="Ваш телефон" required />
+                        <input class="holder" type="email" placeholder="Ваш телефон" required />
                         <input class="holder" type="text" placeholder="Сообщение" />
                         <div class="checkbox">
-                            <input type="checkbox" id="check"><label for="check"></label> 
-                            <p>Я даю согласие на обработку персональных данных <br> в соответсвии с <a href="#check">политикой конфиденциальности</a> </p>
+                            <label class="check">
+                                <input type="checkbox" id="check"  onclick="clickCheckBtm()">
+                                <p id="text" style="display:none">Checkbox is CHECKED!</p>
+                                <span class="checkmark"></span>
+                              </label>
+                              
+                            <p>Я даю согласие на обработку персональных данных <br> в соответсвии с <a
+                                    href="#check">политикой конфиденциальности</a> </p>
                         </div>
 
                     </div>
                 </form>
 
-                <input class="btn-send" type="submit" value="Отправить" />
+                <input class="btn-send" type="submit" value="Отправить" disabled />
 
             </div>
         </div>
