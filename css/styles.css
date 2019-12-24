@@ -22,6 +22,12 @@
     url('../fonts/SFUIDisplay-Ultralight.woff') format('woff2'); /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
+@font-face {
+    font-family: SF UI Display-black;
+    src: local('SF UI Display-black'), local('SF UI Display-black'),
+    url('../fonts/sf-ui-display-black.otf') format('opentype'); /* Chrome 26+, Opera 23+, Firefox 39+ */
+}
+
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -470,6 +476,8 @@ height: 72px;
     resize: none;
     background-color: transparent;
     letter-spacing: -0.025em;
+    font-family: SF UI Display;
+    font-weight: 300;
 }
 
 .button {
@@ -509,6 +517,7 @@ input:focus {
     right: 0;
     left: 0;
     height: 804px;
+    z-index: 10;
 }
 .popup {
     position: absolute;
@@ -544,8 +553,11 @@ input:focus {
     top: 430px;  
     border-bottom: 1px solid #000000;
     padding: 26px 0;
-    margin-bottom: 44px;
     color: #000;
+}
+
+.popup .holder:last-child {
+    margin-bottom: 20px;
 }
 
 .popup .btn-send  {
@@ -630,6 +642,11 @@ input:focus {
     color: #000;
 }
 
+.confir .checkbox a {
+    text-decoration: underline;
+    color: #FFFFFF;
+}
+
 .popup .checkbox {
     color: #000;
     margin-bottom: 30px;
@@ -708,11 +725,8 @@ form .checkbox label:after{
   
   .check input:checked ~ .checkmark:after {
     display: block;
-  }
+}
   
-
-
-
 .checkbox a:hover {
     cursor: pointer;
 } 
@@ -720,6 +734,18 @@ form .checkbox label:after{
 .desktop-block {
     display: block;
 }
+
+.design{
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    flex-wrap: wrap-reverse;
+}
+
+.design a:last-child {
+    text-decoration: underline;
+}
+
 
 @media (min-width: 768px) and (max-width: 1160px) { 
     
@@ -854,6 +880,8 @@ header {
         padding: 0 0 26px 0;
         border-bottom: 0.5px solid #FFFFFF;
         font-size: 24px;
+        font-family: SF UI Display-black;
+        font-weight: 900;
         line-height: 29px;
     }
     
@@ -879,7 +907,7 @@ header {
     .info {
         font-family: SF UI Display-Ligth;
         font-weight: 300;
-        font-size: 12px;
+        font-size: 14px;
         padding-top:0;
     }
 
@@ -905,6 +933,13 @@ header {
         font-size: 24px;
         line-height: 29px;    
         margin-bottom: 40px;
+        font-family: SF UI Display-black;
+        font-weight: 900;
+
+    }
+
+    .btn-more, .popup .btn-send {
+        font-size: 18px;
     }
 
     .rpblock, .lpblock {
@@ -922,7 +957,7 @@ header {
      
     .pblock-span {
         font-weight: 300;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 14px;
     }
 
@@ -955,7 +990,10 @@ header {
 
     .btn-send {
         margin: 0 auto;
+        font-size: 18px;
+        margin-left: 34px;
     }
+
     .contact-rigth {
         margin-right: 30px;
         padding-top: 8px;
@@ -965,22 +1003,29 @@ header {
         padding-bottom: 70px;
         border-bottom: 0.5px solid #FFFFFF;
         margin-bottom: 60px;
-        text-align: center;
     }
     
     .design {
-        padding-left: 30px;
+        padding: 10px 30px 0;
+        margin-bottom: 10px;
         font-style: normal;
         font-weight: 300;
         font-size: 12px;
         line-height: 14px;
     }
 
+    .design a:last-child {
+        margin-bottom: 10px;
+    }
+
     .crigth-title{
         font-weight: bold;
-        font-size: 18px;
+        font-size: 24px;
         line-height: 21px;
         margin-bottom: 40px;
+        font-family: SF UI Display-black;
+        font-weight: 900;
+
     }
     .phone, .mail{
         font-style: normal;
@@ -1094,6 +1139,13 @@ header {
 }
 
 
+@media (min-width: 320px) and (max-width: 767px)  {
+ .popup {
+    height: 100vh;
+ }
+ }
+
+
 
 @media (min-width: 320px) and (max-width: 1440px)  {
 
@@ -1103,7 +1155,6 @@ header {
         height: fit-content;
         width: 100%;
         z-index: 6;
-
     }
 
     .pop-form {
@@ -1114,7 +1165,7 @@ header {
         font-weight: normal;
         font-size: 18px;
         line-height: 140%;
-        margin-bottom:50px;
+        margin-bottom:30px;
     }
 
     .popup .holder {
@@ -1124,7 +1175,7 @@ header {
         line-height: 14px; 
     }
     .popup .btn-send {
-        margin: 0 0 60px 60px;    
+        margin: 0 0 60px 34px;    
     }
 
     .send-result {
@@ -1148,4 +1199,9 @@ header {
         top: 120px;
     }
 
+}
+@media (min-width: 320px) and (max-width: 567px)  {
+    .popup {
+       height: 100vh;
+   }
 }

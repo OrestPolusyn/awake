@@ -9,13 +9,10 @@ $(".block-info").click(function () {
 });
 $(".btn-order").click(function () {
     $(".overlay").show();
-    $('html, body').animate({ scrollTop: 0 }, 50);
-    return false;
+    $(".overlay").css("position","fixed")
 });
 $(".btn-conect").click(function () {
     $(".overlay").show();
-    $('html, body').animate({ scrollTop: 0 }, 50);
-    return false;
 })
 $(".overlay img").click(function () {
     $(".overlay").hide()
@@ -24,8 +21,7 @@ $(".btn-send").click(function () {
     $(".popup").hide();
     $(".send-result").show();
     $(".overlay").show();
-    $('html, body').animate({ scrollTop: 0 }, 50);
-    return false;
+    $(".overlay").css("position","fixed")
 });
 $(".btn-more").click(function () {
     $(".rpblock").show();
