@@ -17,16 +17,21 @@ $(".btn-conect").click(function () {
 
 })
 $(".res-img").click(function () {
-    $(".overlay").hide()
+    $(".overlay").css("display","none");
+
 });
 
 $(".btn-send").click(function () {
     $(".popup").hide();
     $(".send-result").show();
     $(".overlay").show();
-    $(".overlay").css("position","fixed")
+    $(".overlay").css("position","fixed");
+    $(".agr-img").hide();
+
        
 });
+
+
 $(".btn-more").click(function () {
     $(".rpblock").show();
     $(".last-block").css("margin-bottom", "46px");
@@ -49,7 +54,6 @@ $(".agr-img").click(function () {
 
 
 
-
 function clickCheck() {
     const  checkBox = document.querySelectorAll("#check");
     const send = document.querySelectorAll(".btn-send");
@@ -63,9 +67,10 @@ function clickCheck() {
 function clickCheckBtm() {
     const  checkBox = document.querySelectorAll("#check");
     const send = document.querySelectorAll(".btn-send");
-    if (checkBox[1].checked == true ){
+    if (checkBox[2].checked == true ){
         send[1].disabled = false;
     } else {
         send[1].disabled = true;
     }
 }
+
