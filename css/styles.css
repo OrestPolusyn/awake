@@ -521,6 +521,35 @@ input:focus {
     z-index: 10;
 }
 
+.overlay-img {
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 10;
+    overflow-y: scroll;
+    cursor: pointer;
+}
+.overlay-img::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .overlay-img::-webkit-scrollbar-thumb {
+    background: #000; 
+    width: 2px;
+    height: 40px;
+}
+
+.overlay-img img {
+    margin: 0 auto;
+    width: 90%;
+    display: none;
+}
+
 
 .popup {
     position: absolute;
