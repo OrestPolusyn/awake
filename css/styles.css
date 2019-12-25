@@ -544,6 +544,10 @@ input:focus {
     height: 40px;
 }
 
+.develop {
+    display: none;
+}
+
 .overlay-img img {
     margin: 0 auto;
     max-width: 1170px;
