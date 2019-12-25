@@ -546,10 +546,19 @@ input:focus {
 
 .overlay-img img {
     margin: 0 auto;
-    width: 90%;
+    max-width: 1170px;
+    width: 100%;
     display: none;
 }
 
+.over-close {
+    display: block !important;
+    width: 20px !important;
+    position: fixed;
+    height: 20px;
+    right: 14px;
+    top: 20px;
+}
 
 .popup {
     position: absolute;
